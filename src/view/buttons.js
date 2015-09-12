@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 		info.innerHTML = " ";
 		pl.view.deleteBook.setupUserInterface();
 	} else if (targets === "home_article") {
-		info.innerHTML = "hello";
+		info.innerHTML = leadText;
 	}
 	});
 
