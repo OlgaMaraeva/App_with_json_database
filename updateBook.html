@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My cooking book</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script>'use strict';</script>
+  <script src="src/ctrl/initialize.js"></script>
+  <script src="src/model/Book.js"></script>
+  <script src="src/view/updateBook.js"></script>
+  <script>
+   window.addEventListener("load", pl.view.updateBook.setupUserInterface);
+  </script>
+</head>
+<body>
+
+<div class="content-wrapper"> 
+    <header></header>
+   	<section id="content">
+	  <div class="sidebar">
+		<menu>
+		  <li><a href="index.html"><button type="button">Home</button></a></li>
+		  <li><a href="listBooks.html"><button type="button">List all articles</button></a></li>
+		  <li><a href="createBook.html"><button type="button">Add article</button></a></li>
+		  <li><a href="/"><button type="button">Update article</button></a></li>
+		  <li><a href="deleteBook.html"><button type="button">Delete article</button></a></li>
+		  <li><button type="button" onclick="Book.clearData()">Clear database</button></li>
+		  <li><button type="button" onclick="Book.createTestData()">Create test data</button></li>
+		</menu>
+	   </div><!-- .sidebar -->
+	  <div class="info">
+	  
+        <h1>Update article</h1>
+  <form id="Book">
+    <p><select class="form-control" name="selectBook"><option value=""> --- </option></select></p>
+    <p><input class="form-control" id="exampleInputEmail1" name="title" /></p>
+	<p><textarea class="form-control" rows="3" cols="50" name="year" placeholder="Write your recipe here"></textarea></p>
+    <p><button class="btn btn-default type="button" name="commit">Save Changes</button></p>
+  </form>
+  
+  
+   	  </div><!-- .info -->
+	</section><!-- #content -->
+	<div class="push"></div>
+    </div><!-- content-wrapper -->
+	<footer class="footer-2">
+	<div>Copyright © text</div>
+    </footer>
+
+</body>
+</html>

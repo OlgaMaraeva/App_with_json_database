@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+@import "bourbon/bourbon";
+@import "base/grid-settings";
+@import "neat/neat";
+@import "base/base";
+
+// Core variables and mixins
+@import "bs/bootstrap";
+
+
+$max-width: em(1024)!global;
+$small-screen: new-breakpoint(max-width 30em);
+
+@mixin res-img ($imgMaxWidth, $imgMinWidth, $imgWidth, $imgMinHeight, $imgMaxHeight) {
+position: relative;
+display: block;
+width: $imgWidth;
+max-width: $imgMaxWidth;
+min-width: $imgMinWidth;
+min-height: $imgMinHeight;
+max-height: $imgMaxHeight;
+}
+
+@mixin display-block {
+position:relative;
+display:block;
+}
+
+@mixin centered {
+position:relative;
+display:block;
+margin:0 auto;
+}
+
+@mixin text-centered {
+position:relative;
+display:block;
+text-align:center;
+}
+
+@mixin responsive-img {
+max-width:100%;
+height:auto;
+}
+
+textarea:hover,
+  input[type="email"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="url"]:hover, input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="month"]:hover, input[type="time"]:hover, input[type="week"]:hover,
+  select[multiple=multiple]:hover {
+    border-color: #c4c4c4; }
+  textarea:focus, 
+  input:focus,
+  select[multiple=multiple]:focus {
+    border-color: #477DCA;
+    box-shadow: 0px 0px 3px rgb(218, 218, 218)!important;
+    border: 1px solid rgb(218, 218, 218)!important;
+    outline: none; }
+
+html {
+	height: 100%;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   font-size: em(16);
+   width:100%;
+   height:100%;
+   text-align:justify;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  cursor: pointer; }
+  
+  
+
+.content-wrapper {
+  @include outer-container;
+     min-height: 100%;
+   height: auto !important;
+   height: 100%;
+   margin: 0 auto -4em;
+}
+
+header {
+@include centered;
+width:100%;
+height:auto;
+background: #DADADA;
+@include media(500px) {
+@include pad(15px 0px 15px 0px);
+   }
+
+> img {
+display:none;
+@include responsive-img;
+@include media(500px) {
+@include centered;
+   }
+}
+}
+
+
+#content {
+@include outer-container;
+padding: $gutter;
+	}
+	
+#info {
+@include span-columns(12);
+padding: 0 5%;
+h1 {
+color: #4D4D4D;
+font-size: 1.5em;
+padding-bottom: 30px;
+}
+@include media(690px) {
+     @include span-columns(9);
+   }
+}
+
+.sidebar {
+@include span-columns(12);
+@include media(690px) {
+     @include span-columns(3);
+   }
+}
+
+li:first-child {
+border-top:1px solid #B9B9B9;
+}
+
+menu li {
+list-style:none;
+button {
+font-weight:normal;
+font-size: 12px;
+background: none;
+color: #6C6B6B;
+border-top:0;
+border-bottom: 1px solid #B9B9B9;
+width: 100%;
+text-align: left;
+padding: 10px 20px;
+&:hover {
+background:#ccc;
+color:#333;
+}
+}
+}
+
+
+.footer-2, .push {
+   height: 13em;
+
+   @include media(min-width 801px) {
+     height: 5em;
+   }
+   
+    @include media(max-width 350px) {
+height: 15em;
+    }
+ }
+
+.footer-2 {
+  $footer-color: white;
+  $footer-link-color: transparentize($footer-color, .6);
+  $footer-disclaimer-color: transparentize($footer-color, .6);
+  background: #DADADA;
+  width: 100%;
+
+  .footer-secondary-links {
+  float: right;
+	
+	@include media(max-width 800px) {
+      float: none;
+      text-align: center;
+    }
+	
+  }
+}
+
+
+.wrapperInput {		
+width: 181px;
+height: 52px;
+text-align: center;
+vertical-align: middle;
+border-radius: 10px;
+border: 2px solid #8e8e93;
+-moz-box-shadow:    inset 0 0  0 2px  #fff;
+-webkit-box-shadow: inset 0 0  0 2px  #fff;
+box-shadow:         inset 0 0  0 2px  #fff;
+margin-bottom: 50px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d6cec3+0,e4ddca+100 */
+background: #d6cec3; /* Old browsers */
+background: -moz-linear-gradient(top,  #d6cec3 0%, #e4ddca 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d6cec3), color-stop(100%,#e4ddca)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #d6cec3 0%,#e4ddca 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #d6cec3 0%,#e4ddca 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #d6cec3 0%,#e4ddca 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #d6cec3 0%,#e4ddca 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6cec3', endColorstr='#e4ddca',GradientType=0 ); /* IE6-9 */
+}
+
+
+.wrapperInput {
+input[type=checkbox] {
+    display:none;
+}
+
+input[type=checkbox], label {
+float:right;
+}
+
+input[type=checkbox] + label:before {
+    content: "⋆";
+	top:0;
+	left:0;
+	font-size:30px;
+	font-weight:bold;
+	color:#777777;
+    display:inline-block;
+    padding: 0 5px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+input[type=checkbox]:checked + label:before, 
+input[type=checkbox]:checked ~ input[type=checkbox] + label:before,
+input[type=checkbox] + label:hover:before,  label:hover ~  label:before {
+    content: "⋆";
+	top:0;
+	left:0;
+	font-size:30px;
+	font-weight:bold;
+	color:#ff9500;
+    display:inline-block;
+    padding: 0 5px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+	}
+}
+
+.wrapperInput:hover {
+background:#eee;
+border-color:#eee;
+}
+
+.books h2 {
+color: #787878;
+margin-bottom: 20px;
+font-size:1.2em;
+}
+
+.books p {
+font-size:0.9em;
+}
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" vocab="http://schema.org/" typeof="WebApplication">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My cooking book</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta property="browserRequirements" content="requires HTML5 support" />
+    <meta property="storageRequirements" content="Local Storage of browser" />
+    <meta property="countriesSupported" content="en" />
+    <meta property="applicationCategory" content="Data management" />
+    <meta property="creator" content="codezona" /> 
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+    <script>'use strict';</script>
+    <script src="src/ctrl/initialize.js"></script>
+    <script src="src/model/Book.js"></script>
+    <script src="src/view/updateBook.js"></script>
+	<script src="src/view/listBooks.js"></script>
+	<script src="src/view/createBook.js"></script>
+	<script src="src/view/deleteBook.js"></script>
+	<script src="src/view/buttons.js"></script>
+
+  </head>
+  <body>
+    <div class="content-wrapper"> 
+      <header></header>
+    	<section id="content">
+	    	<div class="sidebar">
+				<menu>
+				  <li><a href="#"><button type="button" class="home_article">Home</button></a></li>
+				  <li><a href="#"><button type="button" class="list_articles">List all articles</button></a></li>
+				  <li><a href="#"><button type="button" class="add_articles">Add article</button></a></li>
+				  <li><a href="#"><button type="button" class="update_articles">Update article</button></a></li>
+				  <li><a href="#"><button type="button" class="delete_articles">Delete article</button></a></li>
+				  <li><button type="button" onclick="Book.clearData()">Clear database</button></li>
+				  <li><button type="button" onclick="Book.createTestData()">Create test data</button></li>
+				</menu>
+			</div><!-- .sidebar -->
+	    	<div id="info">
+			    <div class = "leadArt">
+                <h1>A Real Southern Cook</h1>
+				<p>This recipe was developed by accident when Dora Charles was working on her book, 
+				“A Real Southern Cook: In Her Savannah Kitchen.” The pickles come together fast, with a shock from 
+				ice cubes and a touch of sugar helping them move from raw to something between a pickle 
+				and a refreshing salad in just about a half-hour. Fresh herbs other than dill, 
+				like basil or a bit of mint or chive, can be used. A few slivers of sweet onion are nice, too.
+				Preparation.</p>
+				
+				<p>Cut off the ends of the cucumbers and use the tines of a fork to draw long stripes down their lengths. 
+				Slice the cucumbers like bread-and-butter pickles, about 1/8-inch thick, and pile them into a large shallow bowl. 
+				Sprinkle the sugar over the cucumbers and stir in well. Scatter the ice cubes over the slices and cover the bowl loosely with plastic wrap. Chill in the freezer for 1/2 hour.
+				Drain the cucumbers in a colander and pat dry with a clean kitchen towel.</p>
+				
+				<p>Put the cucumbers back in the bowl, sprinkle the vinegar over them evenly, and stir well. 
+				Add the salt and pepper, if using, and stir well to combine. Toss in the herbs and the onions, if using. 
+	    		Refrigerate until ready to serve. They will still be good the next day, though not quite as crisp.</p>
+				</div>
+				
+        	</div><!-- .info -->
+		</section><!-- #content -->
+		<div class="push"></div>
+    </div><!-- content-wrapper -->
+	<footer class="footer-2">
+	<div>Copyright © text,</div>
+    </footer>
+   <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48105674-1', 'codezona');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
